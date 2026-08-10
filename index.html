@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Antigravity CLI — Assistente de IA Agentizado de Próxima Geração</title>
+    <meta name="description" content="Landing page oficial do Antigravity CLI (agy). Descubra a poder dos subagentes autônomos, tarefas em segundo plano, comandos slash e o ecossistema de customização da Google DeepMind.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Background Decorative Glowing Orbs -->
+    <div class="bg-glow-container">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+        <div class="bg-grid-pattern"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon-wrapper">
+                    <i data-lucide="cpu" class="logo-icon"></i>
+                </div>
+                <span class="logo-text">Antigravity <span class="logo-badge">CLI</span></span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#features">Recursos</a>
+                <a href="#terminal-demo">Terminal Vivo</a>
+                <a href="#subagents">Subagentes</a>
+                <a href="#slash-commands">Comandos Slash</a>
+                <a href="#customization">Customização</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://github.com/Psychovv/antigravity_test" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-github">
+                    <i data-lucide="github"></i>
+                    <span>GitHub Repo</span>
+                    <span class="stars-badge"><i data-lucide="star"></i> Star</span>
+                </a>
+                <a href="#get-started" class="btn btn-primary">
+                    <span>Instalar CLI</span>
+                    <i data-lucide="terminal"></i>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer">
+        <div class="mobile-drawer-header">
+            <span class="logo-text">Antigravity CLI</span>
+            <button class="mobile-menu-close"><i data-lucide="x"></i></button>
+        </div>
+        <div class="mobile-drawer-links">
+            <a href="#features" class="mobile-link">Recursos</a>
+            <a href="#terminal-demo" class="mobile-link">Terminal Vivo</a>
+            <a href="#subagents" class="mobile-link">Subagentes</a>
+            <a href="#slash-commands" class="mobile-link">Comandos Slash</a>
+            <a href="#customization" class="mobile-link">Customização</a>
+            <a href="https://github.com/Psychovv/antigravity_test" target="_blank" class="btn btn-secondary w-full">
+                <i data-lucide="github"></i> GitHub Repositório
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="hero-badge-text">Desenvolvido com tecnologia Google DeepMind Gemini 3.6</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    O Terminal do Futuro é <br>
+                    <span class="gradient-text">Agentizado e Autônomo</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    O <strong>Antigravity CLI (<code>agy</code>)</strong> eleva a programação assistida por IA a um novo patamar. Execute subagentes paralelos, agende rotinas cron, integre servidores MCP e gerencie seu código com precisão cirúrgica sem sair da linha de comando.
+                </p>
+
+                <!-- Quick Terminal Copy Widget -->
+                <div class="hero-cmd-widget">
+                    <div class="cmd-box">
+                        <span class="cmd-prompt">$</span>
+                        <code id="install-cmd">curl -fsSL https://antigravity.google/install.sh | sh</code>
+                        <button class="copy-btn" data-clipboard="curl -fsSL https://antigravity.google/install.sh | sh" title="Copiar Comando">
+                            <i data-lucide="copy"></i>
+                            <span class="copy-tooltip">Copiado!</span>
+                        </button>
+                    </div>
+                    <div class="hero-ctas">
+                        <a href="https://github.com/Psychovv/antigravity_test" target="_blank" class="btn btn-primary btn-lg">
+                            <i data-lucide="github"></i>
+                            <span>Acessar Repositório no GitHub</span>
+                        </a>
+                        <a href="#terminal-demo" class="btn btn-tertiary btn-lg">
+                            <i data-lucide="play-circle"></i>
+                            <span>Ver Demonstração</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Showcase -->
+                <div class="hero-graphic-card">
+                    <div class="graphic-window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">
+                            <i data-lucide="terminal"></i>
+                            antigravity-cli — active agent session
+                        </div>
+                        <div class="window-badge">
+                            <i data-lucide="activity"></i> Gemini 3.6 Pro
+                        </div>
+                    </div>
+                    <div class="graphic-wrapper">
+                        <img src="assets/hero_banner.jpg" alt="Antigravity CLI Futuristic AI Interface" class="hero-img">
+                        <div class="graphic-overlay-badge badge-top-right">
+                            <i data-lucide="check-circle-2"></i> Subagentes Ativos: 4
+                        </div>
+                        <div class="graphic-overlay-badge badge-bottom-left">
+                            <i data-lucide="shield-check"></i> Execução Segura & Auditada
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="10">10x</div>
+                    <div class="stat-label">Velocidade em Refatorações Paralelas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Integração com Protocolo MCP</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0s</div>
+                    <div class="stat-label">Bloqueio de Terminal com Async Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">⚡ DeepMind</div>
+                    <div class="stat-label">Modelos Gemini 3.6 Native Powered</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Features Grid -->
+        <section id="features" class="section-padding features-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Poder Sem Precedentes</span>
+                    <h2 class="section-title">Tudo o que o Antigravity CLI é capaz de fazer</h2>
+                    <p class="section-description">
+                        Uma plataforma completa projetada para transformar ideias complexas em código pronto para produção com autonomia total.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-purple">
+                            <i data-lucide="git-fork"></i>
+                        </div>
+                        <h3 class="feature-title">Orquestração de Subagentes Autônomos</h3>
+                        <p class="feature-text">
+                            Delegue partes complexas do trabalho para subagentes dedicados (`research`, `self`, ou customizados). Cada subagente opera em seu próprio contexto com workspaces ramificados (`branch`) ou compartilhados (`share`).
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">invoke_subagent</span>
+                            <span class="tag">define_subagent</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-blue">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3 class="feature-title">Tarefas Assíncronas em Segundo Plano</h3>
+                        <p class="feature-text">
+                            Execute compilações, testes ou servidores sem pausar o chat. O CLI gerencia os processos via `run_command` assíncrono e notifica reativamente quando os resultados estão prontos.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">manage_task</span>
+                            <span class="tag">run_command</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-cyan">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3 class="feature-title">Agendamento & Cronjobs Nativo</h3>
+                        <p class="feature-text">
+                            Configure temporizadores únicos ou rotinas recorrentes em sintaxe cron padrão (ex: `*/5 * * * *`). Defina condições de cancelamento dinâmico para não desperdiçar recursos.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">schedule</span>
+                            <span class="tag">cron</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-green">
+                            <i data-lucide="sliders"></i>
+                        </div>
+                        <h3 class="feature-title">Ecossistema de Customização Completo</h3>
+                        <p class="feature-text">
+                            Crie Skills reutilizáveis (`SKILL.md`), estabeleça diretrizes de estilo globais em `rules/`, gerencie Plugins e conecte servidores MCP (`mcp_config.json`) com ciclo de vida com Hooks.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">Skills</span>
+                            <span class="tag">Rules</span>
+                            <span class="tag">MCP</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-amber">
+                            <i data-lucide="slash"></i>
+                        </div>
+                        <h3 class="feature-title">Comandos Slash Interativos</h3>
+                        <p class="feature-text">
+                            Acione fluxos avançados com comandos intuitivos no TUI: `/goal` para missões de longa duração, `/plan` para estruturação de etapas, `/grill-me` para refinamento de arquitetura e `/learn` para memorização.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">/goal</span>
+                            <span class="tag">/plan</span>
+                            <span class="tag">/grill-me</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box glow-rose">
+                            <i data-lucide="file-code"></i>
+                        </div>
+                        <h3 class="feature-title">Artefatos Visuais e Modificações Precisas</h3>
+                        <p class="feature-text">
+                            Gere documentações ricas em Markdown com diagramas Mermaid, carrosséis de imagens e aplique edições cirúrgicas no código (`replace_file_content` e `multi_replace_file_content`).
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">Mermaid</span>
+                            <span class="tag">Artifacts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Terminal Interactive Simulator -->
+        <section id="terminal-demo" class="section-padding terminal-section bg-darker">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Experiência Interativa</span>
+                    <h2 class="section-title">Veja o Antigravity CLI em Ação</h2>
+                    <p class="section-description">
+                        Explore como o assistente interage no terminal em cenários reais de engenharia de software.
+                    </p>
+                </div>
+
+                <div class="terminal-interactive-box">
+                    <div class="terminal-nav-tabs">
+                        <button class="terminal-tab active" data-tab="subagents">
+                            <i data-lucide="users"></i> Orquestração de Subagentes
+                        </button>
+                        <button class="terminal-tab" data-tab="goal">
+                            <i data-lucide="target"></i> Modo /goal & Cron
+                        </button>
+                        <button class="terminal-tab" data-tab="mcp">
+                            <i data-lucide="plug"></i> Integração MCP & Skills
+                        </button>
+                        <button class="terminal-tab" data-tab="diff">
+                            <i data-lucide="file-diff"></i> Edição de Código Inteligente
+                        </button>
+                    </div>
+
+                    <div class="terminal-window">
+                        <div class="window-bar">
+                            <div class="buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-min"></span>
+                                <span class="btn-max"></span>
+                            </div>
+                            <span class="title">agy — bash — 80x24</span>
+                            <div class="status-indicator">
+                                <span class="status-dot"></span> ONLINE
+                            </div>
+                        </div>
+
+                        <div class="terminal-body">
+                            <!-- Tab Content 1: Subagents -->
+                            <div class="tab-pane active" id="pane-subagents">
+                                <div class="terminal-line"><span class="user-prompt">user@antigravity:~$</span> <span class="cmd-text">agy "Refatore o modulo de pagamentos e crie testes unitarios completos"</span></div>
+                                <div class="terminal-line text-cyan">[Antigravity CLI] Analisando escopo da solicitação...</div>
+                                <div class="terminal-line text-purple">⚡ Invocando Subagente #1: <span class="highlight">RefactorEngine (role: Code Refactoring)</span></div>
+                                <div class="terminal-line text-purple">⚡ Invocando Subagente #2: <span class="highlight">TestGenBot (role: Unit Test Specialist)</span></div>
+                                <div class="terminal-line text-dim">------------------------------------------------------------------------</div>
+                                <div class="terminal-line text-green">✓ [Subagente #1] Refatorou `payment_gateway.py` (Workspace: branch)</div>
+                                <div class="terminal-line text-green">✓ [Subagente #2] Criou 14 casos de teste em `tests/test_payment.py`</div>
+                                <div class="terminal-line text-amber">➜ [System] 0 falhas encontradas. Todos os 14 testes passaram!</div>
+                                <div class="terminal-line text-cyan">➜ Concluído com sucesso em 4.2 segundos!</div>
+                            </div>
+
+                            <!-- Tab Content 2: /goal & Cron -->
+                            <div class="tab-pane" id="pane-goal">
+                                <div class="terminal-line"><span class="user-prompt">user@antigravity:~$</span> <span class="cmd-text">agy /goal "Monitore o deploy do Kubernetes e envie alertas em caso de erro"</span></div>
+                                <div class="terminal-line text-cyan">[Antigravity CLI] Executando comando /goal ativado. Modo persistente até conclusão.</div>
+                                <div class="terminal-line text-purple">⏱️ Agendando tarefa recorrente: cron="*/2 * * * *" (MaxIterations: 10)</div>
+                                <div class="terminal-line text-yellow">⏳ Aguardando ciclo de verificação... (Background Task #42)</div>
+                                <div class="terminal-line text-dim">[10:02:15] Checking kubectl rollout status... SUCCESS</div>
+                                <div class="terminal-line text-dim">[10:04:15] Checking pod metrics & logs... Pods 100% Healthy!</div>
+                                <div class="terminal-line text-green">✓ [Goal Accomplished] Deploy concluído com estabilidade total.</div>
+                            </div>
+
+                            <!-- Tab Content 3: MCP & Skills -->
+                            <div class="tab-pane" id="pane-mcp">
+                                <div class="terminal-line"><span class="user-prompt">user@antigravity:~$</span> <span class="cmd-text">agy "Verifique os esquemas de banco com o servidor MCP PostgreSQL"</span></div>
+                                <div class="terminal-line text-cyan">[Antigravity CLI] Carregando MCP Server: `postgres-db-connector`</div>
+                                <div class="terminal-line text-purple">📂 Ativando Skill: `skills/db-migration-checker/SKILL.md`</div>
+                                <div class="terminal-line text-dim">Reading database schema for table 'users' & 'transactions'...</div>
+                                <div class="terminal-line text-green">✓ Esquema validado. 0 conflitos de chave estrangeira detectados.</div>
+                                <div class="terminal-line text-cyan">➜ Relatório gravado em `.agents/artifacts/schema_report.md`</div>
+                            </div>
+
+                            <!-- Tab Content 4: Code Diff -->
+                            <div class="tab-pane" id="pane-diff">
+                                <div class="terminal-line"><span class="user-prompt">user@antigravity:~$</span> <span class="cmd-text">agy "Substitua a chamada legada de fetch por async/await"</span></div>
+                                <div class="terminal-line text-cyan">[Antigravity CLI] Modificando `src/api.js` usando `replace_file_content`:</div>
+                                <div class="diff-block">
+                                    <div class="diff-line diff-del">- fetch('/api/data').then(res => res.json()).then(data => render(data));</div>
+                                    <div class="diff-line diff-add">+ const response = await fetch('/api/data');</div>
+                                    <div class="diff-line diff-add">+ const data = await response.json();</div>
+                                    <div class="diff-line diff-add">+ render(data);</div>
+                                </div>
+                                <div class="terminal-line text-green">✓ Alteração aplicada sem efeitos colaterais. Lint limpo!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subagents Deep Dive Section -->
+        <section id="subagents" class="section-padding subagents-section">
+            <div class="container">
+                <div class="subagents-grid-wrapper">
+                    <div class="subagents-content">
+                        <span class="section-tag">Orquestração Multi-Agente</span>
+                        <h2 class="section-title">Trabalhe com uma Equipe de IA Especializada</h2>
+                        <p class="section-description">
+                            Com o Antigravity CLI, você não conversa com um único modelo isolado. Você lidera uma equipe autônoma capaz de dividir tarefas complexas em pesquisas, edições de código e testes paralelos.
+                        </p>
+
+                        <div class="subagent-features-list">
+                            <div class="subagent-item">
+                                <div class="icon-circle"><i data-lucide="layers"></i></div>
+                                <div>
+                                    <h4>Isolamento de Workspaces</h4>
+                                    <p>Os subagentes podem rodar em modo <code>branch</code> (novo repositório isolado) ou <code>share</code> para evitar colisão de dados.</p>
+                                </div>
+                            </div>
+
+                            <div class="subagent-item">
+                                <div class="icon-circle"><i data-lucide="message-square"></i></div>
+                                <div>
+                                    <h4>Comunicação Inter-Agentes</h4>
+                                    <p>Agentes enviam mensagens diretamente uns aos outros via <code>send_message</code> com IDs de conversação únicos.</p>
+                                </div>
+                            </div>
+
+                            <div class="subagent-item">
+                                <div class="icon-circle"><i data-lucide="shield"></i></div>
+                                <div>
+                                    <h4>Gerenciamento Reativo</h4>
+                                    <p>Supervisione todos os subagentes com <code>manage_subagents</code> (list, kill, kill_all) sem loops de polling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subagents-graphic">
+                        <div class="glass-card graphic-frame">
+                            <img src="assets/subagent_orchestration.jpg" alt="Fluxo de Orquestração de Subagentes Antigravity" class="subagents-img">
+                            <div class="graphic-caption">
+                                <i data-lucide="git-commit"></i> Arquitetura de Comunicação e Paralelização de Tarefas no Antigravity CLI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slash Commands Showcase -->
+        <section id="slash-commands" class="section-padding slash-section bg-darker">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Comandos Rápidos</span>
+                    <h2 class="section-title">Comandos Slash Nativos no Terminal</h2>
+                    <p class="section-description">
+                        Atalhos poderosos para controlar o comportamento do assistente diretamente na interface TUI.
+                    </p>
+                </div>
+
+                <div class="slash-cards-grid">
+                    <!-- Slash 1 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/goal</span>
+                            <i data-lucide="target" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Missões Estendidas</h4>
+                        <p class="slash-text">Executa tarefas de longa duração (ex: durante a noite) sem parar até atingir 100% do objetivo estipulado.</p>
+                        <div class="slash-example"><code>agy /goal "Corrija todos os lints do projeto"</code></div>
+                    </div>
+
+                    <!-- Slash 2 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/plan</span>
+                            <i data-lucide="map" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Planejamento Passo a Passo</h4>
+                        <p class="slash-text">Cria um plano de ação estruturado antes de alterar qualquer linha de código no repositório.</p>
+                        <div class="slash-example"><code>agy /plan "Migrar banco para PostgreSQL"</code></div>
+                    </div>
+
+                    <!-- Slash 3 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/grill-me</span>
+                            <i data-lucide="help-circle" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Entrevista Arquitetural</h4>
+                        <p class="slash-text">Faz perguntas direcionadas para resolver ambiguidades e alinhar decisões antes da implementação.</p>
+                        <div class="slash-example"><code>agy /grill-me "Arquitetura do novo microserviço"</code></div>
+                    </div>
+
+                    <!-- Slash 4 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/teamwork-preview</span>
+                            <i data-lucide="users" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Simulação de Time</h4>
+                        <p class="slash-text">Visualiza como múltiplos agentes autônomos trabalharão juntos em projetos de grande escala.</p>
+                        <div class="slash-example"><code>agy /teamwork-preview "Refatoração geral"</code></div>
+                    </div>
+
+                    <!-- Slash 5 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/schedule</span>
+                            <i data-lucide="calendar" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Agendador de Tarefas</h4>
+                        <p class="slash-text">Configura cronjobs ou temporizadores pontuais para verificação contínua no terminal.</p>
+                        <div class="slash-example"><code>agy /schedule "*/15 * * * *" "Rodar testes"</code></div>
+                    </div>
+
+                    <!-- Slash 6 -->
+                    <div class="slash-card">
+                        <div class="slash-header">
+                            <span class="slash-badge">/learn</span>
+                            <i data-lucide="brain" class="slash-icon"></i>
+                        </div>
+                        <h4 class="slash-title">Aprendizado Persistente</h4>
+                        <p class="slash-text">Salva novas preferências de código e regras do usuário para serem aplicadas em futuras sessões.</p>
+                        <div class="slash-example"><code>agy /learn "Sempre use Tailwind v3 nas telas"</code></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization System Section -->
+        <section id="customization" class="section-padding customization-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Extensibilidade</span>
+                    <h2 class="section-title">Ecossistema de Customização Total</h2>
+                    <p class="section-description">
+                        Adapte o Antigravity CLI às normas da sua empresa ou projeto pessoal com Skills, Rules, Plugins e MCP.
+                    </p>
+                </div>
+
+                <div class="custom-tree-grid">
+                    <div class="tree-card">
+                        <div class="tree-header">
+                            <i data-lucide="folder-tree"></i>
+                            <span>Estrutura de Diretórios <code>.agents/</code></span>
+                        </div>
+                        <pre class="tree-code"><code>.agents/
+├── skills/
+│   └── database-migrator/
+│       ├── SKILL.md       # Instruções e YAML metadata
+│       └── scripts/       # Scripts auxiliares
+├── rules/
+│   ├── code-style.md      # Regras de formatação
+│   └── security.md        # Protocolos de segurança
+├── plugins/
+│   └── dev-toolkit/      # Bundles reutilizáveis
+├── mcp_config.json        # Servidores Model Context Protocol
+└── hooks.json             # Ciclo de vida e gatilhos</code></pre>
+                    </div>
+
+                    <div class="custom-details">
+                        <div class="custom-item">
+                            <div class="custom-badge glow-purple">Skills</div>
+                            <p>Manuais de instruções dinâmicos ativados sob demanda com scripts, exemplos e recursos específicos para o fluxo de trabalho.</p>
+                        </div>
+                        <div class="custom-item">
+                            <div class="custom-badge glow-cyan">Rules</div>
+                            <p>Regras inflexíveis de estilo e segurança carregadas automaticamente para garantir conformidade em cada linha de código gerada.</p>
+                        </div>
+                        <div class="custom-item">
+                            <div class="custom-badge glow-green">MCP (Model Context Protocol)</div>
+                            <p>Conecte o Antigravity a bancos de dados, APIs de terceiros, Jira, GitHub e ferramentas internas de maneira nativa.</p>
+                        </div>
+                        <div class="custom-item">
+                            <div class="custom-badge glow-amber">Hooks</div>
+                            <p>Automações executadas antes ou depois de ações específicas do agente (pre-commit, post-edit, linters automatizados).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Integration & Repository Call-to-Action -->
+        <section id="get-started" class="section-padding cta-section">
+            <div class="container">
+                <div class="cta-box glass-card text-center">
+                    <div class="cta-badge">
+                        <i data-lucide="github"></i> Repositório Aberto no GitHub
+                    </div>
+                    <h2 class="cta-title">Pronto para Experimentar o Antigravity CLI?</h2>
+                    <p class="cta-description">
+                        Este projeto e toda a estrutura de demonstração estão integrados ao repositório oficial no GitHub. Explore o código, contribua ou teste em seu ambiente local.
+                    </p>
+
+                    <div class="repo-link-box">
+                        <span class="repo-icon"><i data-lucide="git-branch"></i></span>
+                        <a href="https://github.com/Psychovv/antigravity_test" target="_blank" rel="noopener noreferrer" class="repo-url">
+                            https://github.com/Psychovv/antigravity_test
+                        </a>
+                        <button class="copy-btn" data-clipboard="https://github.com/Psychovv/antigravity_test" title="Copiar Link">
+                            <i data-lucide="copy"></i>
+                        </button>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="https://github.com/Psychovv/antigravity_test" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl">
+                            <i data-lucide="external-link"></i>
+                            <span>Ver no GitHub</span>
+                        </a>
+                        <a href="https://github.com/Psychovv/antigravity_test/fork" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-xl">
+                            <i data-lucide="git-fork"></i>
+                            <span>Fazer Fork</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo-text">Antigravity <span class="logo-badge">CLI</span></div>
+                <p class="footer-desc">
+                    Plataforma de Desenvolvimento Agentizada da Google DeepMind. Elevando a engenharia de software com IA de alta precisão.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Psychovv/antigravity_test" target="_blank" aria-label="GitHub Repository"><i data-lucide="github"></i></a>
+                    <a href="https://antigravity.google/docs" target="_blank" aria-label="Documentação"><i data-lucide="book-open"></i></a>
+                    <a href="https://antigravity.google/changelog" target="_blank" aria-label="Changelog"><i data-lucide="rss"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <h4>Recursos</h4>
+                    <a href="#features">Subagentes Autônomos</a>
+                    <a href="#features">Tarefas em Background</a>
+                    <a href="#features">Cronjobs & Timers</a>
+                    <a href="#customization">Protocolo MCP</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Comandos Slash</h4>
+                    <a href="#slash-commands">/goal (Missões)</a>
+                    <a href="#slash-commands">/plan (Planejamento)</a>
+                    <a href="#slash-commands">/grill-me (Entrevista)</a>
+                    <a href="#slash-commands">/schedule (Agendamento)</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Comunidade & Código</h4>
+                    <a href="https://github.com/Psychovv/antigravity_test" target="_blank">Repositório GitHub</a>
+                    <a href="https://github.com/Psychovv/antigravity_test/issues" target="_blank">Relatar Issues</a>
+                    <a href="https://antigravity.google/docs" target="_blank">Docs Oficiais</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Antigravity CLI — Criado para o repositório <a href="https://github.com/Psychovv/antigravity_test" target="_blank" class="link-highlight">Psychovv/antigravity_test</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
